@@ -17,14 +17,14 @@ const Index = ({ products, orders }) => {
     }
   };
 
-  const handleEdit = async (id) => {
-    try {
-      await Axios.put(`/products/${id}`)
-      setPizzaList()
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // const handleEdit = async (id) => {
+  //   try {
+  //     await Axios.put(`/products/${id}`)
+  //     setPizzaList()
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   const handleStatus = async (id) => {
     const item = orderList.filter((order) => order._id === id)[0];
@@ -74,12 +74,7 @@ const Index = ({ products, orders }) => {
                 <td>{product.title}</td>
                 <td>${product.prices[0]}</td>
                 <td>
-                  <button
-                    className={styles.button}
-                    onClick={() => handleEdit(product._id)}
-                  >
-                    Edit
-                  </button>
+                  <button className={styles.button}>Edit</button>
                   <button
                     className={styles.button}
                     onClick={() => handleDelete(product._id)}
