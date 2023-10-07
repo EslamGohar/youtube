@@ -1,8 +1,9 @@
 .container {
   height: calc(100vh - 100px);
-  background-color: #d1411e;
+  background-color: #f74418e5;
   overflow: hidden;
   position: relative;
+  z-index: 99;
 }
 
 .arrowContainer {
@@ -20,7 +21,33 @@
   width: 300vw;
   height: 100%;
   display: flex;
-  transition: all 1.5s ease-in-out ;
+  transition: all 1.5s ease-in-out;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 25, 22, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999
+}
+
+.overlay h2 {
+  font-weight: 800;
+  font-size: 4.3em;
+  margin-top: 170px;
+  text-align: center;
+  color: #fff;
+}
+
+.overlay p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #fff;
 }
 
 .imgContainer {
@@ -30,7 +57,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .container{
+  .container {
     height: 50vh;
   }
 }
